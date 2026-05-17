@@ -1,4 +1,7 @@
-﻿namespace AppHotel
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
+namespace AppHotel
 {
     public partial class App : Application
     {
@@ -6,7 +9,15 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new Views.Sobre());
+        }
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            var window = base.CreateWindow(activationState);
+            window.Width = 400;
+            window.Height = 600;
+
+            return window;
         }
     }
 }

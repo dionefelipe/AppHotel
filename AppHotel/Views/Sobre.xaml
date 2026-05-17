@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Primary}">
+
+    <VerticalStackLayout Padding="8">
+        <Label 
+             Text="Sobre"
+             FontFamily="Mono-Italic"
+             FontSize="40"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center" />
+
+        <Frame BackgroundColor="{StaticResource Tertiary}">
+
+            <Grid RowDefinitions="auto, auto"
+              ColumnDefinitions="*, *, *"
+              RowSpacing="12"
+              ColumnSpacing="15">
+
+                <Label Grid.Row="0" Grid.Column="0" 
+                    Text="Desenvolvido por:     "
+                    TextColor="{StaticResource Gray300}" />
+
+                <Label Grid.Row="0" Grid.Column="1" 
+                    Text="  Dione Felipe"
+                    TextColor="{StaticResource Gray300}"
+                    FontFamily="Nono"
+                    FontSize="15" />
+
+
+                <Label Grid.Row="1" Grid.Column="0" 
+                    Text="Ano:     "
+                    TextColor="{StaticResource Gray300}"
+                    FontFamily="Nono"
+                    FontSize="15" />
+
+                <DatePicker Grid.Row="1" Grid.Column="1"
+                            Format="yyyy"
+                            TextColor="{StaticResource Gray300}"
+                            FontFamily="Nono"
+                            FontSize="15" />
+            </Grid>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>

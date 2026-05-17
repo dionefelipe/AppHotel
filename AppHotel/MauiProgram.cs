@@ -13,6 +13,9 @@ namespace AppHotel
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("FragmentMono-Italic.ttf", "Mono-Italic");
+                    fonts.AddFont("FragmentMono-Regular.ttf", "Mono");
+
                 });
 
 #if DEBUG
