@@ -4,15 +4,14 @@
              x:Class="AppHotel.Views.Sobre"
              Title="Sobre"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Primary}">
+             BackgroundColor="{StaticResource Gray600}">
 
     <VerticalStackLayout Padding="8">
-        <Label 
-             Text="Sobre"
-             FontFamily="Mono-Italic"
-             FontSize="40"
-             VerticalOptions="Center" 
-             HorizontalOptions="Center" />
+        <Label Text="Sobre"
+                FontFamily="Mono-Italic"
+                FontSize="40"
+                TextColor="{StaticResource Gray300}"
+                HorizontalTextAlignment="Center"/>
 
         <Frame BackgroundColor="{StaticResource Tertiary}">
 
@@ -45,6 +44,16 @@
                             FontSize="15" />
             </Grid>
         </Frame>
+
+        <Frame Margin="30" Background="{StaticResource Tertiary}"/>
+
+        <Button Text="App HOTEL"
+                TextColor="{StaticResource Gray300}"
+                FontFamily="Mono Italic"
+                FontSize="25"
+                BackgroundColor="{StaticResource Tertiary}"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="Button_Clicked"/>
 
     </VerticalStackLayout>
 </ContentPage>

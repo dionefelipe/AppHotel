@@ -57,6 +57,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\NewContent1.xaml.cs" />
+	  <Compile Remove="Views\TelaEnd.xaml.cs" />
+	  <Compile Remove="Views\TelaFIm.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Views\NewContent1.xaml" />
+	  <MauiXaml Remove="Views\TelaEnd.xaml" />
+	  <MauiXaml Remove="Views\TelaFIm.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
@@ -64,6 +76,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\ContratacaoHopedagem.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EndTela.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HospedagemContratada.xaml">

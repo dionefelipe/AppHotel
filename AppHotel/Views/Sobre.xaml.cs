@@ -6,4 +6,15 @@ public partial class Sobre : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		try
+		{
+			Navigation.PushAsync (new ContratacaoHopedagem ());
+		} catch (Exception ex)
+		{
+			DisplayAlert("Ops", ex.Message, "OK");
+		}
+    }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.EndTela"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray600}">
+    
+    <VerticalStackLayout Padding="8">
+        <Frame Margin="10" Background="{StaticResource Tertiary}">
+            <Label
+                Text="SUA RESERVA FOI CONFIRMADA"
+                FontFamily="Mono-Italic"
+                FontSize="40"
+                HorizontalTextAlignment="Center" />
+        </Frame>
+        
+        <Frame Margin="10" Background="{StaticResource Tertiary}">
+            <Label
+                Text="Obrigado!!"
+                FontFamily="Mono-Italic"
+                FontSize="20"
+                HorizontalTextAlignment="Center" />
+        </Frame>
+
+        <Button Text="Tela Inicial"
+                TextColor="{StaticResource Gray300}"
+                FontFamily="Mono"
+                FontSize="25"
+                BackgroundColor="{StaticResource Tertiary}"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="Button_Clicked"/>  
+
+    </VerticalStackLayout>
+</ContentPage>

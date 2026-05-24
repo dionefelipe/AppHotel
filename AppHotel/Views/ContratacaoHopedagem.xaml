@@ -2,19 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppHotel.Views.ContratacaoHopedagem"
-             Title="ContratacaoHopedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Primary}">
+             BackgroundColor="{StaticResource Gray600}">
 
-    <VerticalStackLayout VerticalOptions="CenterAndExpand"
-                         Padding="10">
-        <Label Text="Calculo da Diaria" 
-                FontFamily="Mono"
-                FontSize="30"
-                TextColor="{StaticResource Gray300}" />
+    <VerticalStackLayout Padding="8">
+        <Label  Text="Calculo da Diaria" 
+                FontFamily="Mono-Italic"
+                FontSize="40"
+                TextColor="{StaticResource Gray300}"
+                HorizontalTextAlignment="Center" />
 
 
-        <Frame Padding="10">
+        <Frame Padding="10" BackgroundColor="{StaticResource Tertiary}">
 
             <VerticalStackLayout>
                 <Grid RowDefinitions="auto, auto"
@@ -55,14 +54,15 @@
                 <Label Text="Escolha sua Suite" />
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione Acomadação"
+                        Title="Selecione Acomadação: "
                         ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame
                     Padding="10"
-                    Margin="10">
+                    Margin="10"
+                    BackgroundColor="{StaticResource Tertiary}">
                     <VerticalStackLayout>
-                        <Label Text="Período da Entadia"/>
+                        <Label Text="Período da Entadia: "/>
 
                         <HorizontalStackLayout>
                             <Label Text="Check-in:"/>
@@ -80,7 +80,13 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" Clicked= "Button_Clicked"/>
+                <Button Text="Calcular" 
+                        HorizontalOptions="Center"
+                        Clicked= "Button_Clicked"/>
+                
+                <Button Text="Inicio" 
+                        HorizontalOptions="Center"
+                        Clicked="Button_Clicked_1"/>
 
             </VerticalStackLayout>
         </Frame>
